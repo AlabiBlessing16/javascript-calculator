@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: plum; /* Background */
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background:  #f4f4f4; /* White for calculator body */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 320px; /* Set width same as buttons */
+}
+
+.display {
+    width: 100%; /* Matches calculator width */
+    padding: 20px;
+    font-size: 2em;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    background: palegoldenrod; /* input background */
+    color: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: palevioletred; /* Buttons dark blue */
+    color: white;
+    transition: 0.2s;
+    width: 100%; /* Match display width proportionally */
+}
+
+button:hover {
+    background: #0073e6; /* Lighter blue on hover */
+}
+
+button.equals {
+    background: palevioletred; /* Orange for equals button */
+    color: white;
+    grid-row: 4 / 6;
+}
+
+button.zero {
+    grid-column: 1 / 3; /* Zero button spans 2 columns */
+}
+
+/* Responsive Design */
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+header ul{
+margin-top:10px;
+}
+
+.project-container{
+grid-template-columns:1fr;
+}
+
+}
